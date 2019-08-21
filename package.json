@@ -1,0 +1,30 @@
+{
+  "name": "simpblog",
+  "version": "1.0.0",
+  "description": "Creating a simple blog using the MERN stack for practice.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birnapwnsu/simpBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/birnapwnsu/simpBlog/issues"
+  },
+  "homepage": "https://github.com/birnapwnsu/simpBlog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.10",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  }
+}

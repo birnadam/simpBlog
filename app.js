@@ -26,6 +26,12 @@ if (!isProduction) {
 mongoose.connect('mongodb://localhost/simpblog');
 mongoose.set('debug', true);
 
+// Add Models
+require('./models/Articles');
+
+// Add Routes
+app.use(require('./routes'));
+
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;

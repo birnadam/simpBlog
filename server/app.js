@@ -5,6 +5,9 @@ const session = require('express-session');
 const cors = require('cors');
 const errorHandler = require('errorhandler');
 const mongoose = require('mongoose');
+// Allows us to use .env
+require("dotenv").config();
+
 
 mongoose.promise = global.Promise;
 
@@ -32,9 +35,6 @@ mongoose.set('debug', true);
 
 // Add Models
 require('./models/Articles');
-
-// Allows us to use .env
-require("dotenv").config();
 
 // Add Routes
 app.use(require('./routes'));

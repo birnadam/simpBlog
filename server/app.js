@@ -23,11 +23,18 @@ if (!isProduction) {
     app.use(errorHandler());
 }
 
-mongoose.connect('mongodb://localhost/simpblog');
+mongoose.connect('mongodb://localhost/simpblog', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+});
 mongoose.set('debug', true);
 
 // Add Models
 require('./models/Articles');
+
+// Allows us to use .env
+require("dotenv").config();
 
 // Add Routes
 app.use(require('./routes'));
@@ -62,4 +69,6 @@ app.use((err, req, res) => {
     });
 });
 
-const server = app.listen(3000, () => console.log('Server started on http://localhost:3000'));
+const port = process.env.PORT || 5000;
+
+const server = app.listen(port, () => console.log('Server started on http://localhost:5000'));
